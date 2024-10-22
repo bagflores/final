@@ -1,0 +1,88 @@
+<form id="create-account-form">
+    <label for="user-type">Selecciona el tipo de cuenta:</label>
+    <select id="user-type" name="user-type" onchange="displayUserForm()">
+      <option value="general">Usuario General</option>
+      <option value="vendedor">Usuario Vendedor</option>
+      <option value="organizador">Usuario Organizador de Eventos</option>
+    </select>
+    
+    <!-- seccion para datos comunes -->
+    <div id="common-fields">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+      
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" required>
+      
+      <label for="dni">D.N.I.:</label>
+      <input type="text" id="dni" name="dni" required>
+      
+      <label for="localidad">Localidad:</label>
+      <input type="text" id="localidad" name="localidad" required>
+      
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required>
+    </div>
+    
+    <!-- seccion extra para vendedores -->
+    <div id="vendedor-fields" style="display: none;">
+      <label for="cuit">CUIT:</label>
+      <input type="text" id="cuit" name="cuit">
+  
+      <label for="feria">Feria donde presta servicios:</label>
+      <select id="feria" name="feria">
+        <!-- opciones de ferias habilitadas -->
+      </select>
+      
+      <!-- datos opcionales para vendedor -->
+      <label for="banco">Banco:</label>
+      <input type="text" id="banco" name="banco">
+      
+      <label for="cbu">CBU:</label>
+      <input type="text" id="cbu" name="cbu">
+      
+      <label for="billetera-virtual">Billetera Virtual:</label>
+      <select id="billetera-virtual" name="billetera-virtual">
+        <!-- opciones de billeteras habilitadas -->
+      </select>
+      
+      <label for="cvu">CVU:</label>
+      <input type="text" id="cvu" name="cvu">
+      
+      <label for="alias">Alias:</label>
+      <input type="text" id="alias" name="alias">
+    </div>
+  
+    <!-- seccion extra para organizadores de eventos -->
+    <div id="organizador-fields" style="display: none;">
+      <label for="cuit-organizador">CUIT:</label>
+      <input type="text" id="cuit-organizador" name="cuit-organizador">
+      
+      <!-- satos opcionales para organizador -->
+      <label for="banco-organizador">Banco:</label>
+      <input type="text" id="banco-organizador" name="banco-organizador">
+      
+      <label for="cbu-organizador">CBU:</label>
+      <input type="text" id="cbu-organizador" name="cbu-organizador">
+      
+      <label for="billetera-organizador">Billetera Virtual:</label>
+      <select id="billetera-organizador" name="billetera-organizador">
+        <!-- opciones de billeteras habilitadas -->
+      </select>
+      
+      <label for="cvu-organizador">CVU:</label>
+      <input type="text" id="cvu-organizador" name="cvu-organizador">
+      
+      <label for="alias-organizador">Alias:</label>
+      <input type="text" id="alias-organizador" name="alias-organizador">
+    </div>
+    
+    <button type="submit">Crear Cuenta</button>
+  </form>
+  
